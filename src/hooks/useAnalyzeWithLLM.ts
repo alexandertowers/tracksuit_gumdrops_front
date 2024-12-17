@@ -3,7 +3,7 @@ import { LlmRequest, LLMData } from '../../types'
 
 
 async function analyzeWithLLM(data: LlmRequest): Promise<LLMData> {
-  const response = await fetch('http://127.0.0.1:8000/llm', {
+  const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/llm`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
